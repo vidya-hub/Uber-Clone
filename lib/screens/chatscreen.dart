@@ -186,13 +186,13 @@ class _ChatScreenState extends State<ChatScreen> {
                       child: Image.asset("images/boy.png"),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
           Padding(
             padding:
-                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.45),
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.42),
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Card(
@@ -204,7 +204,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 child: Container(
                   // color: Colors.cyan,
                   height: MediaQuery.of(context).size.height * 0.07,
-                  width: MediaQuery.of(context).size.width * 0.97,
+                  width: MediaQuery.of(context).size.width,
                   child: Stack(
                     overflow: Overflow.clip,
                     alignment: Alignment.centerRight,
@@ -212,21 +212,21 @@ class _ChatScreenState extends State<ChatScreen> {
                       Row(
                         // mainAxisAlignment: MainAxisAlignment.,
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(left: 40),
-                            child: Text(
-                              "Say Something...",
-                              // style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
+                          Text(
+                            "Say Something...",
+                            textAlign: TextAlign.center,
+                            // style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 200),
-                              child: Icon(
-                                Icons.add,
-                                size: 30,
-                                color: Colors.black,
+                          Expanded(
+                                                      child: GestureDetector(
+                              onTap: () {},
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 200),
+                                child: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),
